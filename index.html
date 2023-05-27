@@ -36,124 +36,48 @@
               Sales Board 🔔
             </h1>
             <p class="hero-text">
-              The sales board project is created to mimic the whiteboard scenario within a sales company, where it showcases the
+              The sales board project is created to mimic the whiteboard scenario within a sales company, where it
+              showcases the
               sellers overall sales.
             </p>
-            <a href="https://github.com/awcoetzer/sales-board" alt="Link to this sites repository on GitHub" target="_blank" class="link link--hero margin-right-sm">Project Repo</a>
-            <a href="https://scrimba.com/learn/frontend" alt="Link to Scrimba's frontend career path" target="_blank" class="link link--hero scrimba">Learn at Scrimba</a>
+            <a href="https://github.com/awcoetzer/sales-board" alt="Link to this sites repository on GitHub"
+              target="_blank" class="link link--hero margin-right-sm">Project Repo</a>
+            <a href="https://scrimba.com/learn/frontend" alt="Link to Scrimba's frontend career path" target="_blank"
+              class="link link--hero scrimba">Learn at Scrimba</a>
           </div>
 
           <picture class="hero-img-box">
             <source srcset="./assets/images/hero/hero.webp" type="image/webp">
             <source srcset="./assets/images/hero/hero-min.png" type="image/png">
 
-            <img src="./assets/images/hero/hero-min.png" alt="Images by catalyststuff on Freepik of a astronaut riding a rocket with the moon behind him" class="hero-img">
+            <img src="./assets/images/hero/hero-min.png"
+              alt="Images by catalyststuff on Freepik of a astronaut riding a rocket with the moon behind him"
+              class="hero-img">
           </picture>
 
         </div>
       </div>
     </section>
 
-    <!-- project required -->
-    <section class="section-padding section-project-required">
-      <div class="container">
-        <span class="pre-heading">Required Version</span>
-        <h2 class="heading-secondary">
-          Sales Board
-        </h2>
-      </div>
-
-      <div class="sale-board-project">
-        <div class="container">
-          <div class="project-container">
-            <!-- project header -->
-            <div class="project-header">
-              <span class="project-heading project-heading--header">
-                Sales Board 🔔
-              </span>
-        
-              <picture class="project-user-image-box">
-                <source srcset="./assets/images/project/project-image.webp" type="image.webp">
-                <source srcset="./assets/images/project/project-image-min.jpg" type="image/jpg">
-              
-                <img src="./assets/images/project/project-image-min.jpg" alt="" class="project-user-image">
-              </picture>
-        
-              <div class="achievements-btns-box">
-                <button class="achievement-btn achievement-btn--star">⭐</button>
-                <button class="achievement-btn achievement-btn--fire">🔥</button>
-              </div>
-            </div>
-        
-            <!-- project body -->
-            <div class="project-body">
-              <div class="displays">
-                <span class="project-heading project-heading--body-one">
-                  Live Sales - <span class="sales-counter">9</span>
-                </span>
-                <div class="display-container">
-                  <p class="display-text sales-text">
-                    ⭐⭐⭐⭐🔥🔥⭐⭐⭐⭐⭐⭐⭐🔥🔥⭐⭐⭐⭐⭐⭐⭐🔥🔥⭐⭐⭐⭐⭐⭐⭐
-                  </p>
-                </div>
-              </div>
-              
-              <div class="displays">
-                <span class="project-heading project-heading--body-two">
-                  Live Achievements - <span class="achievement-counter">3</span>
-                </span>
-                <div class="display-container">
-                  <p class="display-text achievements-text">
-                    🔔💰🏆
-                  </p>
-                </div>
-              </div>
-            </div>
-        
-            <!-- project footer -->
-            <div class="project-footer">
-              <div class="totals-container">
-                <span class="project-heading project-heading--footer-one">
-                  Total Revenue
-                </span>
-                <div class="display-container--footer">
-                  <p class="footer-text">$ 2700</p>
-                </div>
-              </div>
-        
-              <div class="totals-container">
-                <span class="project-heading project-heading--footer-two">
-                  Total Commision
-                </span>
-                <div class="display-container--footer">
-                  <p class="footer-text">$ 675</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- project stretch goal -->
+    <!-- project required & stretch goal -->
     <section class="section-padding section-project-stretch">
       <div class="container">
-        <span class="pre-heading">Stretch Goal Version</span>
+        <span class="pre-heading">Required & Stretch Goal Version</span>
         <h2 class="heading-secondary">
           Sales Board
         </h2>
       </div>
-    
+
       <div class="sale-board-project">
         <div class="container">
           <div class="project-container">
             <!-- light & dark theme buttons -->
             <div class="absolute-container">
               <div class="themes-container">
-                <ion-icon name="sunny-outline" class="absolute-icon theme-icon-light"></ion-icon>
-                <ion-icon name="moon-outline" class="absolute-icon theme-icon-dark active-theme"></ion-icon>
+                <ion-icon name="sunny" id="theme-icon-sun" class="absolute-icon theme-icon"></ion-icon>
+                <ion-icon name="moon" id="theme-icon-moon" class="absolute-icon"></ion-icon>
               </div>
-              <ion-icon name="refresh-outline" class="absolute-icon"></ion-icon>
+              <ion-icon name="refresh" id="reset-btn" class="absolute-icon"></ion-icon>
             </div>
 
             <!-- project header -->
@@ -161,45 +85,41 @@
               <span class="project-heading project-heading--header">
                 Sales Board 🔔
               </span>
-    
+
               <picture class="project-user-image-box">
                 <source srcset="./assets/images/project/project-image.webp" type="image.webp">
                 <source srcset="./assets/images/project/project-image-min.jpg" type="image/jpg">
-    
+
                 <img src="./assets/images/project/project-image-min.jpg" alt="" class="project-user-image">
               </picture>
-    
-              <div class="achievements-btns-box">
-                <button class="achievement-btn achievement-btn--star">⭐</button>
-                <button class="achievement-btn achievement-btn--fire">🔥</button>
+
+              <div class="sales-btns-box">
+                <button id="product-btn-a" class="sales-btn">⭐</button>
+                <button id="product-btn-b" class="sales-btn">🔥</button>
               </div>
             </div>
-    
+
             <!-- project body -->
             <div class="project-body">
               <div class="displays">
                 <span class="project-heading project-heading--body-one">
-                  Live Sales - <span class="sales-counter">9</span>
+                  Live Sales - <span id="sales-counter-el" class="sales-counter">0</span>
                 </span>
                 <div class="display-container">
-                  <span class="display-text sales-text">
-                    ⭐⭐⭐⭐🔥🔥⭐⭐⭐⭐⭐⭐⭐🔥🔥⭐⭐⭐⭐⭐⭐⭐🔥🔥⭐⭐⭐⭐⭐⭐⭐
-                  </span>
+                  <span class="display-text sales-text"></span>
                 </div>
               </div>
-              
+
               <div class="displays">
                 <span class="project-heading project-heading--body-two">
-                  Live Achievements - <span class="achievement-counter">3</span>
+                  Live Achievements - <span id="achievement-counter-el" class="achievement-counter">0</span>
                 </span>
                 <div class="display-container">
-                  <span class="display-text achievements-text">
-                    🔔💰🏆
-                  </span>
+                  <span class="display-text achievements-text"></span>
                 </div>
               </div>
             </div>
-    
+
             <!-- project footer -->
             <div class="project-footer">
               <div class="totals-container">
@@ -207,16 +127,16 @@
                   Total Revenue
                 </span>
                 <div class="display-container--footer">
-                  <p class="footer-text">$ 2700</p>
+                  <p id="revenue-text-el" class="footer-text">$ 0</p>
                 </div>
               </div>
-    
+
               <div class="totals-container">
                 <span class="project-heading project-heading--footer-two">
                   Total Commision
                 </span>
                 <div class="display-container--footer">
-                  <p class="footer-text">$ 675</p>
+                  <p id="commision-text-el" class="footer-text">$ 0</p>
                 </div>
               </div>
             </div>
@@ -232,7 +152,8 @@
       <div class="container">
         <div class="footer-text-box center-text">
           <p class="done-by">
-            This project was done by <a href="https://github.com/awcoetzer" class="done-by--link" target="_blank">Andre W.
+            This project was done by <a href="https://github.com/awcoetzer" class="done-by--link" target="_blank">Andre
+              W.
               Coetzer</a> | <a href="https://www.freepik.com/author/catalyststuff" target="_blank"
               class="done-by--link">Images by
               catalyststuff</a> on Freepik
@@ -242,9 +163,9 @@
     </div>
   </footer>
 
-
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="./assets/javascript/themes.js" type="Module"></script>
   <script src="./assets/javascript/app.js" type="Module"></script>
 </body>
 
