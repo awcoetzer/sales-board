@@ -20,7 +20,7 @@ const themeLightBtnEl = document.getElementById('theme-icon-sun');
 const themeDarkBtnEl = document.getElementById('theme-icon-moon');
 const resetBtnEl = document.getElementById('reset-btn');
 
-let themeValue, salesArr, salesCount, achievementsArr, achievementsCount, revenue, revenueTarget,  commision;
+let themeValue, salesArr, salesCount, achievementsArr, achievementsCount, revenue, revenueTarget,  commision, fire, star;
 
 /*
   placed both products in a single array
@@ -60,7 +60,9 @@ const productsArr = [
 const achievements = {
   bell: '🔔',
   money: '💰',
-  trophy: '🏆'
+  trophy: '🏆',
+  icecream: '🍧',
+  superStar: '✨'
 }
 
 /*
@@ -143,6 +145,22 @@ const setRevenueTargetFromLocal = function () {
   }
 }
 
+const setFireInLocal = function () {
+  if (localStorage.hasOwnProperty('fireInLocal')) {
+    fire = JSON.parse(localStorage.getItem('fireInLocal'))
+  } else {
+    fire = 0;
+  }
+}
+
+const setStarInLocal = function () {
+  if (localStorage.hasOwnProperty('starInLocal')) {
+    star = JSON.parse(localStorage.getItem('starInLocal'))
+  } else {
+    star = 0;
+  }
+}
+
 const setCommisionFromLocal = function () {
   if (localStorage.hasOwnProperty('commisionInLocal')) {
     commision = JSON.parse(localStorage.getItem('commisionInLocal'));
@@ -181,6 +199,8 @@ const init = function () {
   revenue = 0;
   revenueTarget = 0;
   commision = 0;
+  fire = 0;
+  star = 0;
 
   setThemeFromLocal();
   setSalesTextFromLocal();
@@ -189,6 +209,8 @@ const init = function () {
   setCommisionFromLocal();
   setAchievementsTextFromLocal();
   setCountersFromLocal();
+  setFireInLocal();
+  setStarInLocal();
 }
 
 init();
@@ -232,10 +254,12 @@ const renderRevenueAndCommision = function (index, productArr) {
     // productB / productArr[1]
     revenue += productArr[index].revenue
     commision += productArr[index].commision
+    fire++
   } else {
     // productA / productArr[0]
     revenue += productArr[index].revenue
     commision += productArr[index].commision
+    star++
   }
 
   revenueTextEl.textContent = `$ ${revenue}`;
@@ -277,9 +301,21 @@ const renderAchievements = function (achievementsObj, index, productArr) {
     achievementsArr.push(achievementsObj.trophy)
   }
 
+  if (fire >= 5) {
+    fire = 0;
+    achievementsArr.push(achievementsObj.icecream)
+  }
+
+  if (star >= 5) {
+    star = 0;
+    achievementsArr.push(achievementsObj.superStar)
+  }
+
   achievementTextEl.textContent = achievementsArr.join('');
   localStorage.setItem('achievementsInLocal', JSON.stringify(achievementsArr));
   localStorage.setItem('revenueTargetInLocal', JSON.stringify(revenueTarget));
+  localStorage.setItem('fireInLocal', JSON.stringify(fire));
+  localStorage.setItem('starInLocal', JSON.stringify(star));
   scrollWithText()
 }
 
@@ -308,6 +344,8 @@ const resetAll = function () {
   localStorage.removeItem('achievementsInLocal');
   localStorage.removeItem('salesCounter');
   localStorage.removeItem('achievementsCounter');
+  localStorage.removeItem('fireInLocal');
+  localStorage.removeItem('starInLocal');
 
   init()
 }
