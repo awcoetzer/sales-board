@@ -1,6 +1,6 @@
-#### <a href="https://scrimba.com" target="_blank" alt="Scrimba's website">SCRIMBA | MODULE 3 | SSALES BOARD</a> 
+#### <a href="https://scrimba.com" target="_blank" alt="Scrimba's website">SCRIMBA | MODULE 3 | SALES BOARD</a> 
 
-This is a solo project by <a href="https://scrimba.com/learn/frontend" target="_blank" alt="Scrimba's frontend career path web page">Scrimba's Frontend Career Path</a> for pro/bootcamp members
+This is a solo project by <a href="https://scrimba.com/learn/frontend" target="_blank" alt="Scrimba's frontend career path web page">Scrimba's Frontend Career Path</a> for bootcamp members
 
 #### <a href="https://sales-board-awcoetzer.netlify.app" target="_blank">view the live version here</a>
 
@@ -22,7 +22,9 @@ We were given a figma <a href="https://www.figma.com/file/7sKjOMc3s9LQ2rAnnSbI4V
 #### PROJECT SCREENS
 ## How the project looks
 
-<img src="./assets/images/readme/full-project.png" width="50%" alt="screenshot of project, full size version"> <img src="./assets/images/readme/full-project-responsive.png" width="11.5%" alt="screenshot of project, responsive version">
+<img src="./assets/images/readme/full-project.png" width="50%" alt="screenshot of project, full size version"> <img src="./assets/images/readme/full-project-responsive.png" width="11.95%" alt="screenshot of project, responsive version">
+
+<img src="./assets/images/readme/full-project-light.png" width="50%" alt="screenshot of project, full size version"> <img src="./assets/images/readme/full-project-responsive-light.png" width="11.95%" alt="screenshot of project, responsive version">
 
 <br>
 
@@ -47,6 +49,7 @@ We were given a figma <a href="https://www.figma.com/file/7sKjOMc3s9LQ2rAnnSbI4V
       - [readme/](./assets/images/readme/)
     - [javascript/](./assets/javascript/)
         - [app.js](./assets/javascript/app.js)
+        - [themes.js](./assets/javascript/themes.js)
 - [index.html](./index.html)
 - [README.md](./README.md)
 - [site.webmanifest](./site.webmanifest)
@@ -95,20 +98,60 @@ We were given a figma <a href="https://www.figma.com/file/7sKjOMc3s9LQ2rAnnSbI4V
 
 - Color palette used within project
   - ```css
-      /* color palettes */
-      --clr-main-shade: ;
-      --clr-main: hsl(280, 15%, 12%);
-      --clr-main-tint: hsl(283, 17%, 25%);
-      --clr-grey: hsl(0, 0%, 100%);
-      --clr-accent-shade: ;
-      --clr-accent: hsl(332, 38%, 45%);
-      --clr-accent-tint: ;
-
-      /* 3d button */
-      --clr-btn-3d-white: linear-gradient(140deg, hsl(0, 0%, 100%), hsl(0, 0%, 70%));
-      --clr-btn-3d-blue: linear-gradient(140deg, hsl(201, 88%, 65%), hsl(201, 88%, 35%));
-      --clr-btn-shadow: hsl(250, 16%, 30%);
+        --clr-shadow: hsl(280, 15%, 6%);
+        --clr-background: hsl(280, 15%, 12%);
+        --clr-background-tint: hsl(281, 17%, 25%);
+        --clr-headline: hsl(0, 0%, 98%);
+        --clr-paragraph: hsl(0, 0%, 85%);
+        --clr-button: hsl(0, 0%, 98%);
+        --clr-button-text: var(--clr-shadow);
+        --clr-button-before: linear-gradient(140deg,
+          hsl(0, 0%, 95%),
+          hsl(0, 0%, 65%));
+        --clr-button-plus: var(--clr-accent-tint);
+        --clr-button-plus-text: var(--clr-shadow);
+        --clr-button-plus-before: linear-gradient(140deg,
+          var(--clr-accent-tint),
+          ar(--clr-accent));
+        --clr-button-shadow: var(--clr-shadow);
+        --clr-stroke: var(--clr-shadow);
+        --clr-highlight: var(--clr-accent-tint);
+        --clr-accent: hsl(332, 38%, 45%);
+        --clr-accent-tint: hsl(332, 38%, 65%);
     ```
+
+  - ```js
+      const lightTheme = function () {
+          document.documentElement.style.setProperty('--clr-shadow', 'hsl(280, 25%, 22%)');
+          document.documentElement.style.setProperty('--clr-background', 'hsl(280, 25%, 72%)');
+          document.documentElement.style.setProperty('--clr-background-tint', 'hsl(281, 37%, 85%)');
+          document.documentElement.style.setProperty('--clr-headline', 'hsl(0, 0%, 18%)');
+          document.documentElement.style.setProperty('--clr-paragraph', 'hsl(0, 0%, 15%)');
+          document.documentElement.style.setProperty('--clr-button', 'hsl(0, 0%, 92%)');
+          document.documentElement.style.setProperty(
+              '--clr-button-before', 
+              'linear-gradient(140deg, hsl(0, 0%, 90%), hsl(0, 0%, 65%))'
+          );
+          document.documentElement.style.setProperty('--clr-accen', 'hsl(332, 38%, 35%)');
+          document.documentElement.style.setProperty('--clr-accent-tint', 'hsl(332, 38%, 65%)');
+      }
+
+    const darkTheme = function () {
+        document.documentElement.style.setProperty('--clr-shadow', 'hsl(280, 15%, 6%)');
+        document.documentElement.style.setProperty('--clr-background', 'hsl(280, 15%, 12%)');
+        document.documentElement.style.setProperty('--clr-background-tint', 'hsl(281, 17%, 25%)');
+        document.documentElement.style.setProperty('--clr-headline', 'hsl(0, 0%, 98%)');
+        document.documentElement.style.setProperty('--clr-paragraph', 'hsl(0, 0%, 85%)');
+        document.documentElement.style.setProperty('--clr-button', 'hsl(0, 0%, 98%)');
+        document.documentElement.style.setProperty(
+            '--clr-button-before',
+            'linear-gradient(140deg, hsl(0, 0%, 95%), hsl(0, 0%, 65%))'
+        );
+        document.documentElement.style.setProperty('--clr-accen', 'hsl(332, 38%, 45%)');
+        document.documentElement.style.setProperty('--clr-accent-tint', 'hsl(332, 38%, 65%)');
+    }
+    ```
+
 - General project variables layout
   - ```css
     :root {
@@ -178,13 +221,26 @@ We were given a figma <a href="https://www.figma.com/file/7sKjOMc3s9LQ2rAnnSbI4V
       --letter-space-p1: 1px;
 
       /* color palettes */
-      --clr-main-shade: ;
-      --clr-main: ;
-      --clr-main-tint: ;
-      --clr-grey: ;
-      --clr-accent-shade: ;
-      --clr-accent: ;
-      --clr-accent-tint: ;
+        --clr-shadow: ;
+        --clr-background: ;
+        --clr-background-tint: ;
+        --clr-headline: ;
+        --clr-paragraph: hsl(0, 0%, 85%);
+        --clr-button: hsl(0, 0%, 98%);
+        --clr-button-text: var(--clr-shadow);
+        --clr-button-before: linear-gradient(140deg,
+          hsl(0, 0%, 95%),
+          hsl(0, 0%, 65%));
+        --clr-button-plus: var(--clr-accent-tint);
+        --clr-button-plus-text: var(--clr-shadow);
+        --clr-button-plus-before: linear-gradient(140deg,
+          var(--clr-accent-tint),
+          var(--clr-accent));
+        --clr-button-shadow: var(--clr-shadow);
+        --clr-stroke: var(--clr-shadow);
+        --clr-highlight: var(--clr-accent-tint);
+        --clr-accent: ;
+        --clr-accent-tint: ;
     }
     ```
 
